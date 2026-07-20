@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap');
+
+:root{
+  --bg:#000;
+  --muted:#94a3b8;
+}
+
+html,body,#root{height:100%}
+body{background:var(--bg);color:#e6eef8;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;}
+
+.font-display{font-family:'Space Grotesk',sans-serif;}
+.font-mono{font-family:'JetBrains Mono',monospace;}
+
+@keyframes ping-slow { 0%{transform:scale(1);opacity:.6}75%,100%{transform:scale(1.6);opacity:0} }
+.animate-ping-slow { animation: ping-slow 2.4s cubic-bezier(0,0,0.2,1) infinite; }
+
+.radar-sweep { animation: sweep 4s linear infinite; transform-origin: 100px 100px; }
+@keyframes sweep { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+.blip { animation: blip 2.4s ease-in-out infinite; }
+@keyframes blip { 0%,100%{opacity:0}50%{opacity:1} }
+
+/* small utility to fade grid backdrop used in the app */
+.bg-grid-backdrop { opacity: .35; }
